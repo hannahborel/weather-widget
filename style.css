@@ -10,7 +10,7 @@ body{
 
 }
 
-.container-main{
+.widget-container{
     width: 854px;
     height: 606px;
     position: fixed;
@@ -21,7 +21,7 @@ body{
    
     border-radius: 33px;
 }
-.background{
+.main{
     width: 100%;
     height: 100%;
     background-image: url(assets/background.png);
@@ -29,3 +29,28 @@ body{
     
 }
 
+.temp-main{
+    position: absolute;
+    left: 51.75%;
+    top: 26.5%;
+    height: 77px;
+    width: 132px;
+    background: #EFCCCA;
+    border-radius: 17.42px;
+}
+
+.temp-container{
+    display: grid;
+    grid-template-columns: repeat(7,87px);
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 5%;
+    height: 20.8%;
+    width: 100%;
+}
+
+.temp-element{
+    background: rgba(252,249,255,0.72);
+    border-radius: 8.57px;
+    width: 85px;
+}
