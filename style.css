@@ -54,3 +54,8 @@ body{
     border-radius: 8.57px;
     width: 85px;
 }
+
+#first-temp{
+    font-family:  -apple-system, BlinkMacSystemFont,'Roboto', sans-serif;
+    color: #FFFCF9;
+}
