@@ -1,17 +1,22 @@
 
-
+// var featureTemp = document.getElementById('feature-temp')
+// var firstTemp = document.getElementById('temp-1')
+// var secondTemp = document.getElementById('temp-2')
+// var thirdTemp = document.getElementById('temp-3')
+// var fourthTemp = document.getElementById('tem-4')
+// var fifthTemp= document.getElementById('temp-5')
+// var sixthTemp = document.getElementById('temp-6')
+// var seventhTemp= document.getElementById('temp-7')
 
 fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.760427&lon=-95.369804&units=imperial&appid=b016badd656d2ede8e0dbb4858e1a133')
 .then(response => response.json())
 .then(data=>{
     
 console.log(data.daily[0].temp.day)
+
 var temp = data.daily[0].temp.day
-document.getElementById("first-temp").innerHTML = temp;
-// var num = (data.daily[0].temp.day)
-// today = num.toString()
-// console.log(today)
-// firstTemp.innerHTML = today;
+document.getElementById('feature-temp').innerHTML = Math.ceil(temp);
+
 
 })
 
