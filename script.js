@@ -1,5 +1,5 @@
 
-// var featureTemp = document.getElementById('feature-temp')
+// var degree= document.getElementById("feature-temp");
 // var firstTemp = document.getElementById('temp-1')
 // var secondTemp = document.getElementById('temp-2')
 // var thirdTemp = document.getElementById('temp-3')
@@ -11,11 +11,13 @@
 fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.760427&lon=-95.369804&units=imperial&appid=b016badd656d2ede8e0dbb4858e1a133')
 .then(response => response.json())
 .then(data=>{
-    
-console.log(data.daily[0].temp.day)
 
-var temp = data.daily[0].temp.day
-document.getElementById('feature-temp').innerHTML = Math.ceil(temp);
+console.log(data.current.temp)
+var temp = data.current.temp
+
+var featureTemp= document.getElementById("feature-temp")
+
+featureTemp.innerHTML = Math.ceil(temp) + '&#8457;';
 
 
 })

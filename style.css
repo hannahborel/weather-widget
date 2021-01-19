@@ -37,6 +37,8 @@ body{
     width: 132px;
     background: #EFCCCA;
     border-radius: 17.42px;
+    justify-content: center;
+    text-align: center;
 }
 
 .temp-container{
@@ -50,12 +52,19 @@ body{
 }
 
 .temp-element{
-    background: rgba(252,249,255,0.72);
+    background:#2E2940;
     border-radius: 8.57px;
     width: 85px;
 }
-
+.temp-element:hover{
+    background-color:  rgba(252,249,255,0.72);
+}
 #feature-temp{
-    font-family:  -apple-system, BlinkMacSystemFont,'Roboto', sans-serif;
+    font-size: 3.5rem;
+    margin: 6%;
+}
+.font{
+    font-family:  SFUIDisplay-Medium, sans-serif;
     color: #FFFCF9;
+    content: "\2109"
 }
