@@ -26,7 +26,7 @@ var featureTemp= document.getElementById("feature-temp")
 
 featureTemp.innerHTML = Math.ceil(temp) + '&#8457;';
 
-
+getToday();
 
 })
 .catch(err => console.log("error"))
@@ -66,15 +66,21 @@ function replaceIndex(newArr){
         console.log("-------Sliced Arr--------",newArr)
         console.log("-------New Week Arr--------",week)
 
+        printDay()
+
     }
 
+ 
 }
 
-function printDay(week){
+function printDay(){
 
-    
+    console.log("printday()")
+    var day = document.querySelector(".day");
+
+    day.innerHTML =week[0];
 
 }
 
-getToday();
+
 

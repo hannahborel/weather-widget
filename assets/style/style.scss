@@ -2,6 +2,7 @@ $browser: #1A1826;
 $feature-box: #EFCCCA;
 $box-hover: rgba(252,249,255,0.72);
 $font-light: #FFFCF9;
+$font-dark: #2E2940;
 
 
 // .browser{
@@ -67,6 +68,16 @@ body{
     background:#2E2940;
     border-radius: 8.57px;
     width: 85px;
+    text-align: center;
 
     &:hover{ background-color:  rgba(252,249,255,0.72);}
+    
+    h2.day{
+        color: $font-light;
+        font-family:  SFUIDisplay-Medium, sans-serif;
+        margin:15%;
+    }
+    img{
+        margin: 15% 12% 12%;
+    }
 }
