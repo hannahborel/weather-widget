@@ -10,7 +10,8 @@
 
 var week = ['sun', 'mon', 'tues', 'wed', 'thur', 'fri', 'sat'];
 var newArr = [];
-dayOfWeek = 0;
+// dayOfWeek = 0;
+
 
 
 
@@ -43,6 +44,8 @@ function getToday(){
     removeIndex(dayOfWeek)
 }
 
+
+
 function removeIndex(dayOfWeek){
 
 var newArr = week.slice(dayOfWeek, week.length)
@@ -57,6 +60,8 @@ replaceIndex(newArr)
 
 }
 
+
+
 function replaceIndex(newArr){
 
     for (var i = newArr.length - 1; i >= 0; i--) {
@@ -65,22 +70,27 @@ function replaceIndex(newArr){
 
         console.log("-------Sliced Arr--------",newArr)
         console.log("-------New Week Arr--------",week)
-
-        printDay()
-
     }
 
- 
+    printDay()
 }
+
+
 
 function printDay(){
 
     console.log("printday()")
-    var day = document.querySelector(".day");
+  
+    for(var i = 0; i < week.length; i++){
 
-    day.innerHTML =week[0];
+        var idNum = week.indexOf(week[i])
+        console.log(idNum)
+
+        var day = document.getElementById("day-"+idNum);
+
+        day.innerHTML =week[i];
+    
+    }
 
 }
-
-
 

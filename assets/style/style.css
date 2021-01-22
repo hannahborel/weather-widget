@@ -58,7 +58,7 @@ body {
 .temp-element:hover {
   background-color: rgba(252, 249, 255, 0.72);
 }
-.temp-element h2.day {
+.temp-element h2.style {
   color: #FFFCF9;
   font-family: SFUIDisplay-Medium, sans-serif;
   margin: 15%;
