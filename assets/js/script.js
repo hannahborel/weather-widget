@@ -10,53 +10,60 @@
 
 var week = ['sun', 'mon', 'tues', 'wed', 'thur', 'fri', 'sat'];
 var newArr = [];
-// dayOfWeek = 0;
+var dataObj= "";
 
 
 
 
-fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.760427&lon=-95.369804&units=imperial&appid=b016badd656d2ede8e0dbb4858e1a133')
+fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.760427&lon=-95.369804&exclude=minutely,hourly,alerts&units=imperial&appid=b016badd656d2ede8e0dbb4858e1a133')
 .then(response => response.json())
 .then(data=>{
 
-console.log(data)
-console.log(data.current.temp)
-var temp = data.current.temp
+    dataObj = data;
+    console.log(dataObj)
 
-var featureTemp= document.getElementById("feature-temp")
+// -------------Open weather Object Target--------------------------------
+    var temp = data.current.temp
 
-featureTemp.innerHTML = Math.ceil(temp) + '&#8457;';
+    var featureTemp= document.getElementById("feature-temp")
 
-getToday();
+    featureTemp.innerHTML = Math.ceil(temp) + '&#8457;';
+
+    getToday();
 
 })
-.catch(err => console.log("error"))
+// .catch(err => console.log("error"))
 
 
 
 
 function getToday(){
+
     var fullDate= new Date()
     var dayOfWeek = fullDate.getDay()
+    var tomorrow = dayOfWeek + 1 
+
+    removeIndex(tomorrow)
+
     console.log("Today's Date:",fullDate)
     console.log("Day of the Week: ", dayOfWeek)
-    
-    removeIndex(dayOfWeek)
+    console.log("tomorrow: ", tomorrow)
 }
 
 
 
-function removeIndex(dayOfWeek){
+function removeIndex(tomorrow){
 
-var newArr = week.slice(dayOfWeek, week.length)
+    var newArr = week.slice(tomorrow, week.length)
+    var numOfElements = week.length - tomorrow
 
-var numOfElements = week.length - dayOfWeek
-week.splice(dayOfWeek, numOfElements)
+        week.splice(tomorrow, numOfElements)
 
-console.log("-------Sliced Arr--------",newArr)
-console.log("-------New Week Arr--------",week)
+            replaceIndex(newArr)
 
-replaceIndex(newArr)
+
+            console.log("-------Sliced Arr--------",newArr)
+            console.log("-------New Week Arr--------",week)
 
 }
 
@@ -72,25 +79,25 @@ function replaceIndex(newArr){
         console.log("-------New Week Arr--------",week)
     }
 
-    printDay()
+    printData()
 }
 
 
 
-function printDay(){
+function printData(){
 
-    console.log("printday()")
+    console.log("printdata()")
   
     for(var i = 0; i < week.length; i++){
 
-        var idNum = week.indexOf(week[i])
+        idNum = week.indexOf(week[i])
         console.log(idNum)
 
         var day = document.getElementById("day-"+idNum);
-
         day.innerHTML =week[i];
-    
-    }
 
+        console.log("daily-temp",dataObj.daily[idNum+1].temp.max)
+    }
+    
 }
 
