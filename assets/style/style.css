@@ -57,13 +57,17 @@ body {
 }
 .temp-element:hover {
   background-color: rgba(252, 249, 255, 0.72);
+  color: #2E2940;
+}
+.temp-element:hover .h2.style {
+  color: #2E2940;
 }
 .temp-element h2.style {
   color: #FFFCF9;
   font-family: SFUIDisplay-Medium, sans-serif;
   margin: 15%;
 }
-.temp-element img {
+.temp-element h2.style img {
   margin: 15% 12% 12%;
 }
 

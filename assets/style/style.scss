@@ -70,14 +70,24 @@ body{
     width: 85px;
     text-align: center;
 
-    &:hover{ background-color:  rgba(252,249,255,0.72);}
+    &:hover{ 
+        background-color:  rgba(252,249,255,0.72);
+        color:$font-dark;
+    
+    }
+
+    &:hover .h2.style{
+        color:$font-dark;
+    }
     
     h2.style{
         color: $font-light;
         font-family:  SFUIDisplay-Medium, sans-serif;
         margin:15%;
-    }
+
+    
     img{
         margin: 15% 12% 12%;
     }
+}
 }
