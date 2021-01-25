@@ -3,7 +3,7 @@
 var week = ['sun', 'mon', 'tues', 'wed', 'thur', 'fri', 'sat'];
 var splitDays = [];
 var dataObj= "";
-var weather =[]
+var weatherArr =[]
 
 fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.760427&lon=-95.369804&exclude=minutely,hourly,alerts&units=imperial&appid=b016badd656d2ede8e0dbb4858e1a133')
 .then(response => response.json())
@@ -85,10 +85,11 @@ function organizeData(){
        obj["temp"] = dataObj.daily[idNum+1].temp.max;
        obj["icon"] = dataObj.daily[idNum+1].weather[0].main
 
-       weather.push(obj)
+       weatherArr.push(obj)
     }
-       console.log(weather)
+       console.log(weatherArr)
        printFirst();
+       printImage()
 
     }
 
@@ -104,10 +105,27 @@ function printFirst(){
     
         
         idNum = week.indexOf(week[i])
-        console.log("day-",idNum)
+      
 
+       
         var dayTarget = document.getElementById("day-"+idNum);
+        var tempElement = document.getElementById("temp-"+idNum)
+      
+        var icon = document.createElement("img");
+
+        console.log("ICON: ", weatherArr[i].icon)
+  
+        if(weatherArr[i].icon === 'Clouds'){
+            icon.src = "assets/img/Cloud.png";
+        }else if (weatherArr[i].icon === 'Rain'){
+            icon.src = "assets/img/rainy.png";
+        }else{
+            icon.src = "assets/img/sun.png";
+        }
+       
+
         dayTarget.innerHTML =week[i];
+        tempElement.appendChild(icon)
 
         console.log("daily-temp: ",dataObj.daily[idNum+1].temp.max, "weather: ",dataObj.daily[idNum+1].weather[0].main)
 
@@ -115,4 +133,9 @@ function printFirst(){
     
 }
 
+function printImage(){
 
+    
+
+    
+}
