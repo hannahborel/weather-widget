@@ -124,12 +124,16 @@ $(".temp-element").hover(
             {"background-color": "rgba(252,249,255,0.72)"})
 
         $(this).find("h3").show()
+        $(this).find("h2").css(
+            {"color": "#2E2940"})
     }, function(){
         var styles = {
             background: '#2E2940'
         };
         $(this).css(styles)
         $(this).find("h3").hide()
+        $(this).find("h2").css(
+            {"color": "#FFFCF9"})
     })
 
     // $(".temp-element").mouseover(function(){

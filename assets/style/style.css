@@ -56,9 +56,6 @@ body {
   text-align: center;
   position: relative;
 }
-.temp-element:hover .h2.style {
-  color: #2E2940;
-}
 .temp-element h2.style {
   color: #FFFCF9;
   font-family: SFUIDisplay-Medium, sans-serif;
@@ -71,6 +68,9 @@ body {
 }
 .temp-element h3 {
   margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 25%;
   z-index: 2;
 }
 
