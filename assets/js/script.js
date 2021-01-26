@@ -1,18 +1,17 @@
 
 
-var week = ['sun', 'mon', 'tues', 'wed', 'thur', 'fri', 'sat'];
+var week = ['SUN', 'MON', 'TUES', 'WED', 'THUR', 'FRI', 'SAT'];
 var splitDays = [];
 var dataObj= "";
 var weatherArr =[]
 
-fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.760427&lon=-95.369804&exclude=minutely,hourly,alerts&units=imperial&appid=b016badd656d2ede8e0dbb4858e1a133')
+fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.760427&lon=-95.369804&exclude=minutely,alerts&units=imperial&appid=b016badd656d2ede8e0dbb4858e1a133')
 .then(response => response.json())
 .then(data=>{
 
     dataObj = data;
     console.log(dataObj)
 
-    
 
 // -------------Open weather Object Target--------------------------------
     var temp = data.current.temp
@@ -25,7 +24,6 @@ fetch('https://api.openweathermap.org/data/2.5/onecall?lat=29.760427&lon=-95.369
 
 })
 // .catch(err => console.log("error"))
-
 
 
 function getToday(){
@@ -82,7 +80,7 @@ function organizeData(){
 
        var obj = {};
        obj["day"] = week[i];
-       obj["temp"] = dataObj.daily[idNum+1].temp.max;
+       obj["temp"] = Math.ceil(dataObj.daily[idNum+1].temp.max);
        obj["icon"] = dataObj.daily[idNum+1].weather[0].main
 
        weatherArr.push(obj)
@@ -93,9 +91,6 @@ function organizeData(){
 
     }
 
-
-
-
 function printFirst(){
 
    for(var i = 0; i < week.length; i++){
@@ -104,17 +99,18 @@ function printFirst(){
         idNum = week.indexOf(week[i])
 
         $("#day-"+idNum).html(week[i])
-        $("#day-"+idNum).after("<h3>"+ weatherArr[i].temp + "</h3>")
+        $("#day-"+idNum).after("<h3>"+ weatherArr[i].temp + "&#8457"+"</h3>")
         // $("#day-"+idNum).after("<h3 id= 'deg-"+ idNum +"'>"+ weatherArr[i].temp + "</h3>")
         $("h3").hide();
     
             if(weatherArr[i].icon === 'Clouds'){
                  $("#temp-"+idNum).append("<img src='assets/img/Cloud.png'/>")
-            }else if (weatherArr[i].icon === 'Rain'){
+            }else if (weatherArr[i].icon === 'Rain' | weatherArr[i].icon === 'Drizzle' | weatherArr[i].icon === 'Thunderstorm'){
                 $("#temp-"+idNum).append("<img src='assets/img/rainy.png'/>")
-            }else{
+            }else if(weatherArr[i].icon === 'Clear'){
             $("#temp-"+idNum).append("<img src='assets/img/sun.png'/>")
-            }
+            } else{$("#temp-"+idNum).append("<img src='assets/img/all.png'/>")
+              }
     }
 }
 
@@ -135,9 +131,4 @@ $(".temp-element").hover(
         $(this).find("h2").css(
             {"color": "#FFFCF9"})
     })
-
-    // $(".temp-element").mouseover(function(){
-    //     $(this.id + ".h2").show()
-    // })
-
 

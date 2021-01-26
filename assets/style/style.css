@@ -23,20 +23,20 @@ body {
 .temp-main {
   position: absolute;
   left: 51.75%;
-  top: 26.5%;
+  top: 25.5%;
   height: 77px;
   width: 132px;
   background: #EFCCCA;
-  border-radius: 17.42px;
+  border-radius: 10px;
   justify-content: center;
   text-align: center;
 }
 
 #feature-temp {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   margin: 6%;
   color: #FFFCF9;
-  font-family: SFUIDisplay-Medium, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .temp-container {
@@ -58,19 +58,22 @@ body {
 }
 .temp-element h2.style {
   color: #FFFCF9;
-  font-family: SFUIDisplay-Medium, sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 15%;
+  font-size: 1.2rem;
 }
 .temp-element img {
   justify-content: center;
   position: relative;
-  top: 5%;
+  top: 7%;
 }
 .temp-element h3 {
   margin: auto;
   position: absolute;
+  font-family: "Roboto", sans-serif;
   top: 50%;
-  left: 25%;
+  left: 20%;
+  font-size: 1.5rem;
   z-index: 2;
 }
 
