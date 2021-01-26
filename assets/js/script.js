@@ -89,7 +89,7 @@ function organizeData(){
     }
        console.log(weatherArr)
        printFirst();
-       printImage()
+    //    printImage()
 
     }
 
@@ -98,44 +98,23 @@ function organizeData(){
 
 function printFirst(){
 
-    console.log("printday()")
-  
-    
-    for(var i = 0; i < week.length; i++){
+   for(var i = 0; i < week.length; i++){
     
         
         idNum = week.indexOf(week[i])
-      
 
-       
-        var dayTarget = document.getElementById("day-"+idNum);
-        var tempElement = document.getElementById("temp-"+idNum)
-      
-        var icon = document.createElement("img");
+        $("#day-"+idNum).html(week[i])
 
-        console.log("ICON: ", weatherArr[i].icon)
+
   
-        if(weatherArr[i].icon === 'Clouds'){
-            icon.src = "assets/img/Cloud.png";
-        }else if (weatherArr[i].icon === 'Rain'){
-            icon.src = "assets/img/rainy.png";
-        }else{
-            icon.src = "assets/img/sun.png";
-        }
-       
-
-        dayTarget.innerHTML =week[i];
-        tempElement.appendChild(icon)
-
-        console.log("daily-temp: ",dataObj.daily[idNum+1].temp.max, "weather: ",dataObj.daily[idNum+1].weather[0].main)
+            if(weatherArr[i].icon === 'Clouds'){
+                 $("#temp-"+idNum).append("<img src='assets/img/Cloud.png'/>")
+            }else if (weatherArr[i].icon === 'Rain'){
+                $("#temp-"+idNum).append("<img src='assets/img/rainy.png'/>")
+            }else{
+            $("#temp-"+idNum).append("<img src='assets/img/sun.png'/>")
+            }
 
     }
-    
-}
-
-function printImage(){
-
-    
-
     
 }

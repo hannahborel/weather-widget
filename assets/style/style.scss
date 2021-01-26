@@ -69,6 +69,7 @@ body{
     border-radius: 8.57px;
     width: 85px;
     text-align: center;
+    position: relative;
 
     &:hover{ 
         background-color:  rgba(252,249,255,0.72);
@@ -84,10 +85,10 @@ body{
         color: $font-light;
         font-family:  SFUIDisplay-Medium, sans-serif;
         margin:15%;
-
-    
-    img{
-        margin: 15% 12% 12%;
     }
-}
+  img{
+      justify-content: center;
+      position: relative;
+      top: 5%;
+  }
 }
