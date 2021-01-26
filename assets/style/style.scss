@@ -72,8 +72,8 @@ body{
     position: relative;
 
     &:hover{ 
-        background-color:  rgba(252,249,255,0.72);
-        color:$font-dark;
+        // background-color:  rgba(252,249,255,0.72);
+    
     
     }
 
@@ -90,5 +90,10 @@ body{
       justify-content: center;
       position: relative;
       top: 5%;
+  }
+
+  h3{
+      margin: auto;
+      z-index: 2;
   }
 }

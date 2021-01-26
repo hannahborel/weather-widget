@@ -56,10 +56,6 @@ body {
   text-align: center;
   position: relative;
 }
-.temp-element:hover {
-  background-color: rgba(252, 249, 255, 0.72);
-  color: #2E2940;
-}
 .temp-element:hover .h2.style {
   color: #2E2940;
 }
@@ -72,6 +68,10 @@ body {
   justify-content: center;
   position: relative;
   top: 5%;
+}
+.temp-element h3 {
+  margin: auto;
+  z-index: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
