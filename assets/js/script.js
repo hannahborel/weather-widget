@@ -108,7 +108,7 @@ function printFirst(){
             }else if (weatherArr[i].icon === 'Rain' | weatherArr[i].icon === 'Drizzle' | weatherArr[i].icon === 'Thunderstorm'){
                 $("#temp-"+idNum).append("<img src='assets/img/rainy.png'/>")
             }else if(weatherArr[i].icon === 'Clear'){
-            $("#temp-"+idNum).append("<img src='assets/img/sun.png'/>")
+            $("#temp-"+idNum).append("<img src='assets/img/Sun.png'/>")
             } else{$("#temp-"+idNum).append("<img src='assets/img/all.png'/>")
               }
     }
