@@ -56,18 +56,21 @@ body {
   text-align: center;
   position: relative;
 }
-.temp-element h2.style {
+
+h2.style {
   color: #FFFCF9;
   font-family: "Roboto", sans-serif;
   margin: 15%;
   font-size: 1.2rem;
 }
-.temp-element img {
+
+img {
   justify-content: center;
   position: relative;
   top: 7%;
 }
-.temp-element h3 {
+
+h3 {
   margin: auto;
   position: absolute;
   font-family: "Roboto", sans-serif;
@@ -122,6 +125,7 @@ body {
 @media (max-width: 320px) {
   .main {
     background-image: url(background-sm.png);
+    background-size: cover;
   }
 
   .main {
@@ -130,7 +134,7 @@ body {
   }
 
   .widget-container {
-    width: 320px;
+    width: 320.25px;
     height: 773px;
     margin-left: -160px;
     margin-top: -386px;
@@ -143,9 +147,59 @@ body {
     width: 109px;
   }
 
+  .temp-container {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7, 25px);
+    row-gap: 5px;
+    height: 210px;
+    bottom: 15%;
+    width: 80%;
+    margin: 0 10%;
+    justify-content: center;
+  }
+
   #feature-temp {
     font-size: 2.6rem;
     margin-top: 8%;
+  }
+
+  .temp-element {
+    height: 25%;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    border-bottom: solid 1px rgba(249, 247, 252, 0);
+    background-image: linear-gradient(to right, rgba(252, 249, 255, 0.72), rgba(249, 247, 252, 0));
+  }
+  .temp-element h2.style {
+    margin: 0;
+    font-size: 0.5rem;
+    display: inline;
+    position: absolute;
+    left: 5px;
+    color: #2E2940;
+    font-weight: 600 !important;
+  }
+
+  img {
+    height: 20.25px;
+    width: 20.25px;
+    position: absolute;
+    display: inline;
+    margin: auto;
+    right: 10px;
+    bottom: 2%;
+  }
+
+  #cloud-img {
+    height: 11.7px;
+    width: 21.4px;
+  }
+
+  #rain-img {
+    height: 14.35px;
+    width: 19.13px;
   }
 }
 

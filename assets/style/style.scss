@@ -3,6 +3,7 @@ $feature-box: #EFCCCA;
 $box-hover: rgba(252,249,255,0.72);
 $font-light: #FFFCF9;
 $font-dark: #2E2940;
+$line: rgba(249, 247, 252, 0);
 
 
 
@@ -71,15 +72,15 @@ body{
     width: 85px;
     text-align: center;
     position: relative;
+    }
 
-    
+
     h2.style{
         color: $font-light;
         font-family: 'Roboto', sans-serif;
         margin:15%;
         font-size: 1.2rem;
     }
-
    img{
       justify-content: center;
       position: relative;
@@ -95,7 +96,7 @@ body{
         font-size: 1.5rem;
         z-index: 2;
     }
-}
+
  
 @media (max-width: 900px) {
     
@@ -141,10 +142,14 @@ body{
     } 
   }
 
+
+//   -------------Mobile------------------------------------
+
   @media (max-width: 320px){
 
     .main{
         background-image: url(background-sm.png);
+        background-size: cover
     }
     
     .main {
@@ -153,7 +158,7 @@ body{
     }
 
     .widget-container{
-        width: 320px;
+        width: 320.25px;
         height: 773px;
         margin-left: -160px;
         margin-top: -386px;
@@ -166,9 +171,61 @@ body{
         width: 109px;
     }
 
+    .temp-container{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(7, 25px);
+        row-gap: 5px;
+        height: 210px;
+        bottom: 15%;
+        width: 80%;
+        margin: 0 10%;
+        justify-content: center;
+    }
+
     #feature-temp{
         font-size: 2.6rem;
         margin-top: 8%;
+    }
+
+    .temp-element{
+        height: 25%;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        padding: 10px;
+        border-bottom: solid 1px $line;
+        background-image: linear-gradient(to right,$box-hover, $line);
+
+        h2.style{
+            margin: 0;
+            font-size: .5rem;
+            display: inline;
+            position: absolute;
+            left : 5px;
+            color: $font-dark;
+            font-weight: 600 !important;
+        }
+    }
+
+    img{ 
+       height:20.25px;
+       width: 20.25px;
+       position: absolute;
+       display: inline;
+       margin: auto;
+       right: 10px;
+       bottom: 2%
+        } 
+
+    #cloud-img{
+    
+    height: 11.7px;
+    width: 21.4px;
+    }
+
+    #rain-img{
+        height: 14.35px;
+       width: 19.13px;
     }
 
 

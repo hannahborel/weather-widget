@@ -100,13 +100,12 @@ function printFirst(){
 
         $("#day-"+idNum).html(week[i])
         $("#day-"+idNum).after("<h3>"+ weatherArr[i].temp + "&#8457"+"</h3>")
-        // $("#day-"+idNum).after("<h3 id= 'deg-"+ idNum +"'>"+ weatherArr[i].temp + "</h3>")
         $("h3").hide();
     
             if(weatherArr[i].icon === 'Clouds'){
-                 $("#temp-"+idNum).append("<img src='assets/img/Cloud.png'/>")
+                 $("#temp-"+idNum).append("<img id ='cloud-img' src='assets/img/Cloud.png'/>")
             }else if (weatherArr[i].icon === 'Rain' | weatherArr[i].icon === 'Drizzle' | weatherArr[i].icon === 'Thunderstorm'){
-                $("#temp-"+idNum).append("<img src='assets/img/rainy.png'/>")
+                $("#temp-"+idNum).append("<img id ='rain-img' src='assets/img/rainy.png'/>")
             }else if(weatherArr[i].icon === 'Clear'){
             $("#temp-"+idNum).append("<img src='assets/img/Sun.png'/>")
             } else{$("#temp-"+idNum).append("<img src='assets/img/all.png'/>")
