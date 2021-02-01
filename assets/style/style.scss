@@ -6,14 +6,6 @@ $font-dark: #2E2940;
 $line: rgba(249, 247, 252, 0);
 
 
-
-// .browser{
-//     max-width: 1366px;
-//     background-color: $browser;
-//     max-height: 784px;
-//     padding-left:10px;
-//     padding-right:10px;
-// }
 body{
     background-color: $browser;
 }
@@ -68,7 +60,7 @@ body{
 
 .temp-element{
     background:#2E2940;
-    border-radius: 8.57px;
+    border-radius: 10px;
     width: 85px;
     text-align: center;
     position: relative;
@@ -97,7 +89,7 @@ body{
         z-index: 2;
     }
 
- 
+//  mediaQuery---------------------------------------
 @media (max-width: 900px) {
     
     .widget-container{
@@ -120,22 +112,24 @@ body{
     #feature-temp{
       font-size: 2.4rem;
     }
-  
+    .temp-container{
+        grid-template-columns: repeat(7, 65.25px);
+        height: 20%;
+        bottom: 5%;
+        }
+
     .temp-element{
-      height: 63.75px;
+      height:100%;
       width: 65.25px;
     }
   
   .temp-element h2.style {
       font-size: .9rem;
     }
-  
-    .temp-container{
-    grid-template-columns: repeat(7, 65.25px);
-    height: 15.6%;
-    bottom: 10%;
-    }
-  
+  h3{
+      font-size: 1.2rem;
+      
+  }
   img{ 
     max-width: 53px;
     max-height: 37px;
@@ -153,8 +147,8 @@ body{
     }
     
     .main {
-        width: 320px;
-        height: 773px;
+        width: 100%;
+        height: 100%;
     }
 
     .widget-container{
@@ -175,7 +169,7 @@ body{
         grid-template-columns: 100%;
         grid-template-rows: repeat(7, 25px);
         row-gap: 5px;
-        height: 210px;
+        height: 75.84px;
         bottom: 15%;
         width: 80%;
         margin: 0 10%;
@@ -188,25 +182,33 @@ body{
     }
 
     .temp-element{
-        height: 25%;
+        height: 25px;
         width: 80%;
-        margin: auto;
-        text-align: center;
-        padding: 10px;
+        margin: 0 auto;
+        padding: 1px 0 0 5px;
         border-bottom: solid 1px $line;
         background-image: linear-gradient(to right,$box-hover, $line);
+        text-align: left;
 
         h2.style{
-            margin: 0;
+            margin: auto;
             font-size: .5rem;
             display: inline;
-            position: absolute;
-            left : 5px;
+            position: relative;
             color: $font-dark;
-            font-weight: 600 !important;
+            text-align: left;
+        }
+
+        h3{
+            position: absolute;
+            display: inline;
+            font-size: .7rem;
+            top: initial;
+            left: initial;
         }
     }
 
+ 
     img{ 
        height:20.25px;
        width: 20.25px;

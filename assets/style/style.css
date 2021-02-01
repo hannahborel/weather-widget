@@ -51,7 +51,7 @@ body {
 
 .temp-element {
   background: #2E2940;
-  border-radius: 8.57px;
+  border-radius: 10px;
   width: 85px;
   text-align: center;
   position: relative;
@@ -102,8 +102,14 @@ h3 {
     font-size: 2.4rem;
   }
 
+  .temp-container {
+    grid-template-columns: repeat(7, 65.25px);
+    height: 20%;
+    bottom: 5%;
+  }
+
   .temp-element {
-    height: 63.75px;
+    height: 100%;
     width: 65.25px;
   }
 
@@ -111,10 +117,8 @@ h3 {
     font-size: 0.9rem;
   }
 
-  .temp-container {
-    grid-template-columns: repeat(7, 65.25px);
-    height: 15.6%;
-    bottom: 10%;
+  h3 {
+    font-size: 1.2rem;
   }
 
   img {
@@ -129,8 +133,8 @@ h3 {
   }
 
   .main {
-    width: 320px;
-    height: 773px;
+    width: 100%;
+    height: 100%;
   }
 
   .widget-container {
@@ -151,7 +155,7 @@ h3 {
     grid-template-columns: 100%;
     grid-template-rows: repeat(7, 25px);
     row-gap: 5px;
-    height: 210px;
+    height: 75.84px;
     bottom: 15%;
     width: 80%;
     margin: 0 10%;
@@ -164,22 +168,28 @@ h3 {
   }
 
   .temp-element {
-    height: 25%;
+    height: 25px;
     width: 80%;
-    margin: auto;
-    text-align: center;
-    padding: 10px;
+    margin: 0 auto;
+    padding: 1px 0 0 5px;
     border-bottom: solid 1px rgba(249, 247, 252, 0);
     background-image: linear-gradient(to right, rgba(252, 249, 255, 0.72), rgba(249, 247, 252, 0));
+    text-align: left;
   }
   .temp-element h2.style {
-    margin: 0;
+    margin: auto;
     font-size: 0.5rem;
     display: inline;
-    position: absolute;
-    left: 5px;
+    position: relative;
     color: #2E2940;
-    font-weight: 600 !important;
+    text-align: left;
+  }
+  .temp-element h3 {
+    position: absolute;
+    display: inline;
+    font-size: 0.7rem;
+    top: initial;
+    left: initial;
   }
 
   img {
