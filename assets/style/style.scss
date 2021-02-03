@@ -79,6 +79,18 @@ body{
       top: 7%;
    }
 
+   #sun-img{
+       top:5%;
+   }
+
+   #cloud-img{
+       width: 62px;
+       height: 40px;
+   }
+
+   #rain-img{
+      width: 65px;
+   }
     h3{
         margin: auto;
         position: absolute;
@@ -93,20 +105,22 @@ body{
 @media (max-width: 900px) {
     
     .widget-container{
-        width: 640.5px;
+         width: 640.5px;
         height: 454.5px;
         margin-left: -320.25px;
         margin-top: -227.25px;
     }
     
     .main {
-        width: 640.5px;
+         width: 640.5px;
         height: 454.5px;
     }
   
     .temp-main{
       height: 57.75px;
       width: 99px;
+      left: 51.5%;
+      top: 27%;
     }
   
     #feature-temp{
@@ -115,7 +129,7 @@ body{
     .temp-container{
         grid-template-columns: repeat(7, 65.25px);
         height: 20%;
-        bottom: 5%;
+        bottom: 6.7%;
         }
 
     .temp-element{
@@ -131,19 +145,27 @@ body{
       
   }
   img{ 
-    max-width: 53px;
-    max-height: 37px;
+   transform:scale(.8);
     } 
+ 
   }
 
 
 //   -------------Mobile------------------------------------
 
-  @media screen and (max-width: 320px){
+  @media screen and (max-width: 375px){
 
+    body{
+        max-width: 100%;
+        max-height: 100%;
+        background-image: url(bg-iphone11.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .main{
-        background-image: url(background-sm.png);
-        background-size: cover
+        background-image: none;
+        background-size: cover;
+        
     }
     
     .main {
@@ -152,15 +174,15 @@ body{
     }
 
     .widget-container{
-        width: 320.25px;
-        height: 773px;
-        margin-left: -160px;
-        margin-top: -386px;
+        width: 300px;
+        height: 640px;
+        margin-left: -150px;
+        margin-top: -320px;
     }
 
     .temp-main{
-        top: 23%;
-        left: 35%;
+        top: 12%;
+        left: 32%;
         height: 67px;
         width: 109px;
     }
@@ -168,11 +190,12 @@ body{
     .temp-container{
         grid-template-columns: 100%;
         grid-template-rows: repeat(7, 25px);
-        row-gap: 5px;
+        row-gap: 10px;
         height: 75.84px;
         bottom: 25%;
         width: 80%;
         margin: 0 10%;
+        position: absolute;
         justify-content: center;
     }
 
@@ -183,52 +206,40 @@ body{
 
     .temp-element{
         height: 25px;
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         padding: 1px 0 0 5px;
         border-bottom: solid 1px $line;
-        background-image: linear-gradient(to right,$box-hover, $line);
         text-align: left;
 
         h2.style{
             margin: auto;
             font-size: .5rem;
+            top: 25%;
             display: inline;
             position: relative;
-            color: $font-dark;
+            color: white;
             text-align: left;
         }
 
         h3{
-            position: absolute;
-            display: inline;
             font-size: .7rem;
-            top: initial;
-            left: initial;
+            top: 25%;
+            display: block;
         }
     }
 
  
     img{ 
-       height:20.25px;
-       width: 20.25px;
        position: absolute;
        display: inline;
        margin: auto;
        right: 10px;
-       bottom: 2%
+       bottom: 2%;
+       transform:scale(.4)
         } 
 
-    #cloud-img{
-    
-    height: 11.7px;
-    width: 21.4px;
-    }
-
-    #rain-img{
-        height: 14.35px;
-       width: 19.13px;
-    }
+ 
 
 
   }

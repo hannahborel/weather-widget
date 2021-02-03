@@ -100,34 +100,53 @@ function printFirst(){
 
         $("#day-"+idNum).html(week[i])
         $("#day-"+idNum).after("<h3>"+ weatherArr[i].temp + "&#8457"+"</h3>")
-        $("h3").hide();
-    
+
+        if($(window).width() >375){
+            $("h3").hide();
+        } else{
+
+        }
+     
+        console.log("wait")
             if(weatherArr[i].icon === 'Clouds'){
                  $("#temp-"+idNum).append("<img id ='cloud-img' src='assets/img/Cloud.png'/>")
             }else if (weatherArr[i].icon === 'Rain' | weatherArr[i].icon === 'Drizzle' | weatherArr[i].icon === 'Thunderstorm'){
                 $("#temp-"+idNum).append("<img id ='rain-img' src='assets/img/rainy.png'/>")
             }else if(weatherArr[i].icon === 'Clear'){
-            $("#temp-"+idNum).append("<img src='assets/img/Sun.png'/>")
+            $("#temp-"+idNum).append("<img id='sun-img' src='assets/img/Sun.png'/>")
             } else{$("#temp-"+idNum).append("<img src='assets/img/all.png'/>")
               }
     }
 }
 
-$(".temp-element").hover(
-    function(){
-        $(this).css(
-            {"background-color": "rgba(252,249,255,0.72)"})
 
-        $(this).find("h3").show()
-        $(this).find("h2").css(
-            {"color": "#2E2940"})
-    }, function(){
-        var styles = {
-            background: '#2E2940'
-        };
-        $(this).css(styles)
-        $(this).find("h3").hide()
-        $(this).find("h2").css(
-            {"color": "#FFFCF9"})
-    })
+function setHover(){
+
+    if($(window).width() >375){
+        
+        $(".temp-element").hover(
+            function(){
+                $(this).css(
+                    {"background-color": "rgba(252,249,255,0.72)"})
+        
+                $(this).find("h3").show()
+                $(this).find("h2").css(
+                    {"color": "#2E2940"})
+            }, function(){
+                var styles = {
+                    background: '#2E2940'
+                };
+                $(this).css(styles)
+                $(this).find("h3").hide()
+                $(this).find("h2").css(
+                    {"color": "#FFFCF9"})
+            })        
+    } else{
+        console.log("show")
+        $("h3").removeClass('style')
+    }
+}
+
+setHover()
+
 
