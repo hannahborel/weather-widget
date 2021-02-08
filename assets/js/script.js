@@ -87,7 +87,6 @@ function organizeData(){
     }
        console.log(weatherArr)
        printFirst();
-    //    printImage()
 
     }
 
@@ -105,9 +104,12 @@ function printFirst(){
             $("h3").hide();
         } else{
 
+
+            $("#temp-5").hide()
+            $("#temp-6").hide()
         }
      
-        console.log("wait")
+  
             if(weatherArr[i].icon === 'Clouds'){
                  $("#temp-"+idNum).append("<img id ='cloud-img' src='assets/img/Cloud.png'/>")
             }else if (weatherArr[i].icon === 'Rain' | weatherArr[i].icon === 'Drizzle' | weatherArr[i].icon === 'Thunderstorm'){

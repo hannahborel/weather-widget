@@ -11,13 +11,13 @@ body{
 }
 
 .widget-container{
-    width: 854px;
-    height: 606px;
+    width: 785.85px;
+    height: 560.85px;
     position: fixed;
     top: 50%;
     left: 50%;
-    margin-left: -427px;
-    margin-top: -303px;
+    margin-left: -392px;
+    margin-top: -280.5px;
     border-radius: 33px;
 }
 
@@ -25,15 +25,17 @@ body{
     width: 100%;
     height: 100%;
     background-image: url(background.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow:hidden;
 }
 
 .temp-main{
     position: absolute;
     left: 51.75%;
     top: 25.5%;
-    height: 77px;
-    width: 132px;
+    height: 70px;
+    width: 120px;
     background: #EFCCCA;
     border-radius: 10px;
     justify-content: center;
@@ -41,27 +43,27 @@ body{
 }
 
 #feature-temp{
-    font-size: 3.2rem;
-    margin: 6%;
+    font-size: 2.5rem;
+    margin: 8%;
     color: $font-light;
     font-family: 'Roboto', sans-serif;
 }
 
 .temp-container{
     display: grid;
-    grid-template-columns: repeat(7,87px);
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 5%;
     justify-content: space-evenly;
-    position: absolute;
-    bottom: 5%;
-    height: 20.8%;
-    width: 100%;
-
-} 
+    margin: auto;
+    top: 70%;
+    height: 20%;
+    width: 95%;
+    position: relative;
+}
 
 .temp-element{
     background:#2E2940;
     border-radius: 10px;
-    width: 85px;
     text-align: center;
     position: relative;
     }
@@ -76,29 +78,16 @@ body{
    img{
       justify-content: center;
       position: relative;
-      top: 7%;
    }
 
-   #sun-img{
-       top:5%;
-   }
-
-   #cloud-img{
-       width: 62px;
-       height: 40px;
-   }
-
-   #rain-img{
-      width: 65px;
-   }
     h3{
-        margin: auto;
-        position: absolute;
-        font-family: 'Roboto', sans-serif;
-        top: 50%;
-        left:20%;
-        font-size: 1.5rem;
-        z-index: 2;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    z-index: 2;
     }
 
 //  mediaQuery---------------------------------------
@@ -109,11 +98,6 @@ body{
         height: 454.5px;
         margin-left: -320.25px;
         margin-top: -227.25px;
-    }
-    
-    .main {
-         width: 640.5px;
-        height: 454.5px;
     }
   
     .temp-main{
@@ -126,16 +110,6 @@ body{
     #feature-temp{
       font-size: 2.4rem;
     }
-    .temp-container{
-        grid-template-columns: repeat(7, 65.25px);
-        height: 20%;
-        bottom: 6.7%;
-        }
-
-    .temp-element{
-      height:100%;
-      width: 65.25px;
-    }
   
   .temp-element h2.style {
       font-size: .9rem;
@@ -146,6 +120,7 @@ body{
   }
   img{ 
    transform:scale(.8);
+
     } 
  
   }
@@ -155,91 +130,72 @@ body{
 
   @media screen and (max-width: 375px){
 
-    body{
-        max-width: 100%;
-        max-height: 100%;
-        background-image: url(bg-iphone11.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .main{
-        background-image: none;
-        background-size: cover;
-        
-    }
     
-    .main {
-        width: 100%;
-        height: 100%;
-    }
 
     .widget-container{
-        width: 300px;
+        height: 667px;
+        width: 375px;
+        margin-left: 0;
+        margin-top: 0;
+        top:0;
+        left:0;
+        background-image: url(bg-sm.png);
+        background-attachment: fixed;
+        background-repeat:no-repeat;
+        background-size: cover;
+        border-radius: 0;
+    }
+
+    .main{
+        position: fixed;
+        width: 320px;
         height: 600px;
-        margin-left: -150px;
+        top: 50%;
+        left: 50%;
         margin-top: -300px;
+        margin-left: -160px;
+        background-image: none;
     }
 
     .temp-main{
         top: 20%;
         left: 32%;
-        height: 67px;
-        width: 109px;
+        height: 80px;
+        width: 120px;
     }
 
     .temp-container{
-        grid-template-columns: 100%;
-        grid-template-rows: repeat(7, 25px);
-        row-gap: 5px;
-        height: 75.84px;
-        bottom: 25%;
-        width: 80%;
-        margin: 0 10%;
-        position: absolute;
-        justify-content: center;
+        grid-template-columns:  repeat(5,1fr);
+        grid-column-gap: 3%;
+        height: 10%;
+        color: $box-hover;
     }
 
     #feature-temp{
-        font-size: 2.6rem;
-        margin: 6%;
+        font-size: 3rem;
     }
 
     .temp-element{
-        height: 25px;
-        width: 90%;
-        margin: 0 auto;
-        padding: 1px 0 0 5px;
-        border-bottom: solid 1px $line;
-        text-align: left;
+        border: 2px solid $box-hover;
 
         h2.style{
-            margin: auto;
-            font-size: .5rem;
-            top: 25%;
-            display: inline;
-            position: relative;
-            color: white;
-            text-align: left;
+            font-size: 0.5rem;
         }
 
-        h3{
-            font-size: .7rem;
-            top: 25%;
-            display: block;
-        }
+    }
+    h2.style{
+        font-size: 0.2rem;
     }
 
- 
-    img{ 
-       position: absolute;
-       display: inline;
-       margin: auto;
-       right: 10px;
-       bottom: 2%;
-       transform:scale(.4)
+    img{
+        top: -15%;
+        transform:scale(.6);
         } 
 
- 
+    h3{
+        font-size: .4rem;
+        color: white;
+        top:75%;
+        }
 
-
-  }
+    }
