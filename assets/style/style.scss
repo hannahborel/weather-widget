@@ -164,24 +164,15 @@ body{
 
     .temp-main{
         height: auto;
-        top: 19%;
+        top: 15%;
         width: 100%;
         position: fixed;
         background: transparent;
         left: auto;
     }
 
-    .temp-container{
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-columns: 80%;
-        grid-row-gap: 1%;
-        color: rgba(252, 249, 255, 0.72);
-        top: 52%;
-        position: fixed;
-    }
-
     #feature-temp{
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin: auto;
         background-color: #EFCCCA;
         display: inline;
@@ -189,10 +180,19 @@ body{
         border-radius: 10px;
     }
 
+    .temp-container{
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-columns: 80%;
+        grid-row-gap: 3%;
+        color: rgba(252, 249, 255, 0.72);
+        top: 45%;
+        position: fixed;
+    }
+
     .temp-element{
-      
+
         h2.style{
-        font-size: 0.5rem;
+        font-size: .7rem;
         position: absolute;
         top: 41%;
         left: 10%;
@@ -201,19 +201,22 @@ body{
     }
 
     #temp-0{
-        background-color: #312949;
+        background-color: #302B42;
     }
     #temp-1{
-        background-color:#3C3454;
+        background-color: #322E44;
     }
     #temp-2{
-        background-color: #4B4363;
+        background-color: #353045;
+    
     }
     #temp-3{
-        background-color: #696180;
+        background-color: #373349;
+    
     }
     #temp-4{
-        background-color: #928BA8;
+        background-color:#3A354A;
+    
     }
 
     img{
