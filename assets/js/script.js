@@ -100,7 +100,7 @@ function printFirst(){
         $("#day-"+idNum).html(week[i])
         $("#day-"+idNum).after("<h3>"+ weatherArr[i].temp + "&#8457"+"</h3>")
 
-        if($(window).width() >375){
+        if($(window).width() >480){
             $("h3").hide();
         } else{
 
@@ -124,7 +124,7 @@ function printFirst(){
 
 function setHover(){
 
-    if($(window).width() >375){
+    if($(window).width() >480){
         
         $(".temp-element").hover(
             function(){
