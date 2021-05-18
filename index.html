@@ -3,47 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+
+
+
     <link rel="stylesheet" href="assets/style/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    
     <title>Weather</title>
 </head>
 <body>
+   <div class="container">
+         <div class="main">
+               <div class="feature-container">
+                     <div class="moon">
+                           <h1 id="feature-temp" class="font"></h1>
+                              </div>
+                     </div>
 
-      <div class="widget-container">
-        <div class="main">
-          <div class="temp-main"> 
-            <h1 id="feature-temp" class="font"></h1>
-          </div>
-          <div class="temp-container">
-            <div class="temp-element" id= temp-0>
-              <h2 id="day-0" class="style"> </h2>
-            </div>
-            <div class="temp-element" id= temp-1>
-              <h2 id="day-1" class="style"> </h2>
-            </div>
-            <div class="temp-element" id= temp-2>
-              <h2 id="day-2" class="style"> </h2>
-            </div>
-            <div class="temp-element" id= temp-3>
-              <h2 id="day-3" class="style"> </h2>
-            </div>
-            <div class="temp-element" id= temp-4>
-              <h2 id="day-4" class="style"> </h2>
-            </div>
-            <div class="temp-element" id= temp-5>
-              <h2 id="day-5" class="style"> </h2>
-            </div>
-            <div class="temp-element" id= temp-6>
-              <h2 id="day-6" class="style"> </h2>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
+               <div class="week-temp container row">
+                  
+                     <div class="temp-element" id= temp-0>
+                                 <h2 id="day-0" class="style"></h2>
+                     </div>
 
-  <script src="assets/js/script.js"></script> 
+                     <div class="temp-element" id= temp-1>
+                                 <h2 id="day-1" class="style"> </h2>
+                     </div>
+
+                     <div class="temp-element" id= temp-2>
+                                 <h2 id="day-2" class="style"> </h2>
+                     </div>
+
+                           <div class="temp-element" id= temp-3>
+                                 <h2 id="day-3" class="style"> </h2>
+                     </div>
+
+                     <div class="temp-element" id= temp-4>
+                                 <h2 id="day-4" class="style"> </h2>
+                     </div>
+
+                     <div class="temp-element" id= temp-5>
+                                 <h2 id="day-5" class="style"> </h2>
+                     </div>
+                           
+                     <div class="temp-element" id= temp-6>
+                                 <h2 id="day-6" class="style"> </h2>
+                     </div>
+               </div>
+
+               <div class="mountains-img">
+                     <img src="/assets/img/mountains.png">
+               </div>
+
+         </div>
+   </div>
+          
+
+<script src="assets/js/script.js"></script> 
 </body>
 </html>

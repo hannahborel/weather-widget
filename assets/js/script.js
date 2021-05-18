@@ -98,10 +98,10 @@ function printFirst(){
         idNum = week.indexOf(week[i])
 
         $("#day-"+idNum).html(week[i])
-        $("#day-"+idNum).after("<h3>"+ weatherArr[i].temp + "&#8457"+"</h3>")
+        $("#day-"+idNum).after("<span>"+ weatherArr[i].temp + "&#8457"+"</span")
 
         if($(window).width() >480){
-            $("h3").hide();
+            $("span").hide();
         } else{
 
 
@@ -111,38 +111,42 @@ function printFirst(){
      
   
             if(weatherArr[i].icon === 'Clouds'){
-                 $("#temp-"+idNum).append("<img id ='cloud-img' src='assets/img/Cloud.png'/>")
+                 $("#temp-"+idNum).append("<img id ='cloud-img' class='weather-img' src='assets/img/Cloud.png'/>")
             }else if (weatherArr[i].icon === 'Rain' | weatherArr[i].icon === 'Drizzle' | weatherArr[i].icon === 'Thunderstorm'){
-                $("#temp-"+idNum).append("<img id ='rain-img' src='assets/img/rainy.png'/>")
+                $("#temp-"+idNum).append("<img id ='rain-img' class='weather-img'  src='assets/img/rainy.png'/>")
             }else if(weatherArr[i].icon === 'Clear'){
-            $("#temp-"+idNum).append("<img id='sun-img' src='assets/img/Sun.png'/>")
-            } else{$("#temp-"+idNum).append("<img src='assets/img/all.png'/>")
+            $("#temp-"+idNum).append("<img id='sun-img' class='weather-img'    src='assets/img/Sun.png'/>")
+            } else{$("#temp-"+idNum).append("<img class='weather-img' src='assets/img/all.png'/>")
               }
     }
 }
 
-
 function setHover(){
 
+   console.log("set hover hit")
     if($(window).width() >480){
         
         $(".temp-element").hover(
             function(){
+               console.log("temp element hover hit")
                 $(this).css(
-                    {"background-color": "rgba(252,249,255,0.72)"})
-        
-                $(this).find("h3").show()
+                    {"background-color": "rgba(252,249,255,0.72"})
+   
+                $(this).find("span").show()
+
                 $(this).find("h2").css(
                     {"color": "#2E2940"})
             }, function(){
                 var styles = {
                     background: '#2E2940'
                 };
+
+                $(this).find("span").hide()
                 $(this).css(styles)
-                $(this).find("h3").hide()
                 $(this).find("h2").css(
                     {"color": "#FFFCF9"})
             })        
+
     } else{
         console.log("show")
         $("h3").removeClass('style')
