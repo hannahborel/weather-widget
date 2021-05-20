@@ -146,7 +146,7 @@ span{
   @media screen and (max-width: 450px){
 
    body{
-      background: linear-gradient(0deg, $font-dark 40%, $bg-pink 41%);
+      background: linear-gradient(0deg, $font-dark 45%, $bg-pink 46%);
       height: 100vh;
       width: 100vw;
    }
@@ -168,13 +168,14 @@ span{
    }
 
    .mountains-img{
-         top: 45%;
+         top: 47%;
 
    }
 
    h2{
       font-size: .75rem;
-      margin-bottom: .5rem;
+      margin-bottom: 0;
+      
    } 
    
    span{
@@ -187,16 +188,18 @@ span{
 
          .week-temp{
             max-width: 425px;
+            margin-top: 25%;
 
             .temp-element{
                width: 30%;
+               padding: 0;
 
             }
 
          }
       
          .weather-img{
-            transform: scale(.8);
+            transform: scale(.7);
          }
       
   }
