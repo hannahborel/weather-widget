@@ -124,7 +124,7 @@ function printFirst(){
 function setHover(){
 
    console.log("set hover hit")
-    if($(window).width() >480){
+    if($(window).width() >451){
         
         $(".temp-element").hover(
             function(){
@@ -148,8 +148,8 @@ function setHover(){
             })        
 
     } else{
-        console.log("show")
-        $("h3").removeClass('style')
+       console.log('else hit')
+        
     }
 }
 
